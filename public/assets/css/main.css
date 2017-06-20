@@ -14,21 +14,32 @@ Morado dark : #38052a*/
 	margin: 0;
 	padding:0;
 	box-sizing: border-box;
+
 }
 
-.jssorb05 {
-    position: absolute;
+body,h1,h2,h3,h4,h5,h6,span,input,label,small{
+  font-family: 'Roboto' !important;
 }
-.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
-    position: absolute;
-    /* size of bullet elment */
-    width: 16px;
-    height: 16px;
-    background: url('img/icons/b05.png') no-repeat;
-    overflow: hidden;
-    cursor: pointer;
+
+#info{
+	margin-top: 20px;
 }
-.jssorb05 div { background-position: -7px -7px; }
-.jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
-.jssorb05 .av { background-position: -67px -7px; }
-.jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+.inicio{
+	margin: 30px 0;
+}
+
+.inicio img{
+	width: 40%;
+	height: 40%;
+}
+.inicio h2{
+	font-weight: 800;
+	color: black;
+}
+
+.btn-inicio button{
+	width: 90%;
+	background-color: #fbd43b;
+	color: white;
+}

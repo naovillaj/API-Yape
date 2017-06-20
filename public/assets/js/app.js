@@ -2,9 +2,18 @@
 
 const render = (root) =>{
 	root.empty();
-	root.append(screen1());
-
+	const wrapper = $('<div class="wrapper"></div>');
+  	const update = function() {
+    render(root);
+  	}
+  	wrapper.append(screen1());	
+	root.append(wrapper);
 }
+
+$(_=>{
+	const root = $("#root");
+	render(root);
+});
 
 // const state = {
 // 	datos: null

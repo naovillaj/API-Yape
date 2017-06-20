@@ -1,0 +1,19 @@
+{
+  "name": "yape-solution",
+  "version": "1.0.0",
+  "description": "Solución del Proyeto final del Sprint 5 - Yape!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "level": "^1.7.0",
+    "leveldown": "^1.7.2",
+    "levelup": "^1.3.8",
+    "morgan": "^1.8.2",
+    "morgan-json": "^1.1.0",
+    "random-number": "0.0.7"
+  }
+}

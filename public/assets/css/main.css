@@ -1,0 +1,34 @@
+/*Rojo - bullet : #f64552
+Gris - bullet : #f8f8f8
+Amarillo - botones : #fbd43b
+Gris dark : #212121
+Gris - letra soft : #8f8f8f
+Turquesa - Términos y condiciones: #00c3a3
+Morado - Entrada de números : #49233b
+Morado light : #451e36
+Morado dark : #38052a*/
+
+
+
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+.jssorb05 {
+    position: absolute;
+}
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 16px;
+    height: 16px;
+    background: url('img/icons/b05.png') no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+.jssorb05 div { background-position: -7px -7px; }
+.jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+.jssorb05 .av { background-position: -67px -7px; }
+.jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }

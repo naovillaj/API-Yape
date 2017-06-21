@@ -7,7 +7,7 @@ $(document).ready(function(){
         0:{
             items:1}
         },
-    
+
   })
 });
 
@@ -20,33 +20,20 @@ const screen1 = (update) =>{
 	const img2 = $("<div class= 'col-xs-12 text-center item inicio' style='width:350px'><img src='assets/img/icons/happy-person.png'><h2> Sin número de cuenta</h2><h4>Elige a quién pagar desde tu lista de contactos.</h4></div>");
 	const img3 = $("<div class= 'col-xs-12 text-center item inicio' style='width:350px'><img src='assets/img/icons/group-people.png'><h2> Gratis y Seguro</h2><h4>La transferencia es inmediata y gratuita de una cuenta a otra.</h4></div>");
 	const btn = $("<div class='col-xs-12 text-center btn-inicio'><button type='button' class='btn btn-lg'>REGISTRARME</button></div>")
-		
+
 	divInfo.append(rowImg);
 	divInfo.append(rowBtn)
 	rowImg.append(divImg);
 	divImg.append(img1);
 	divImg.append(img2);
 	divImg.append(img3);
-	rowBtn.append(btn);	        
+	rowBtn.append(btn);
 
 	btn.on('click',() => {
-    
-    reRender(result,filter,update);
-  	});
-  	reRender(result,"",update);
+    console.log(state.screen);
+    state.screen = "screen2";
+    update();
+});
 
 	return divInfo;
 }
-
-const reRender = (container,filter,update) => {
-  container.empty();
-  const filteredStations = filterByDistrict(state.stations,filter);
-  if (filteredStations.length > 0) {
-    $.each(filteredStations,(index,station) => {
-      container.append(StationItem(station,update));
-    });
-  } else {
-    container.append($('<p>Distrito no encontrado</p>'));
-  }
-}
-

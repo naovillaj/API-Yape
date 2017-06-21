@@ -3,21 +3,34 @@
 const render = (root) =>{
 	root.empty();
 	const wrapper = $('<div class="wrapper"></div>');
-  	const update = function() {
+  const update = function() {
     render(root);
-  	}
-  	wrapper.append(screen1());	
-	root.append(wrapper);
+  }
+
+	if(state.screen == null){
+		wrapper.append(screen1(update));
+	}
+
+	if(state.screen == 'screen2'){
+		wrapper.append(screen2(update));
+	}
+
+		root.append(wrapper);
 }
+
+const state = {
+		screen: null,
+		yapeUser : null
+};
+
+console.log(state.screen);
 
 $(_=>{
 	const root = $("#root");
 	render(root);
 });
 
-// const state = {
-// 	datos: null
-// };
+
 
 // $(_=>{
 // 	$.get("https://randomuser.me/api/", (json) =>{

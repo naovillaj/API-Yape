@@ -30,8 +30,8 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 }
 
 .inicio img{
-	width: 40%;
-	height: 40%;
+	width: 20%;
+	height: 20%;
 }
 .inicio h2, .inicio h3{
 	font-weight: 800;
@@ -68,4 +68,11 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 
 #terminos{
 	color: #00c3a3;
+}
+
+#check{
+	background-color: #fbd43b;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

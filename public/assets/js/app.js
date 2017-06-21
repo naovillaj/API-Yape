@@ -15,6 +15,22 @@ const render = (root) =>{
 		wrapper.append(screen2(update));
 	}
 
+	if(state.screen == 'screen3'){
+		wrapper.append(screen3(update));
+	}
+
+	if(state.screen == 'screen4'){
+		wrapper.append(screen4(update));
+	}
+
+	if(state.screen == 'screen5'){
+		wrapper.append(screen5(update));
+	}
+
+	if(state.screen == 'screen6'){
+		wrapper.append(screen6(update));
+	}
+
 		root.append(wrapper);
 }
 

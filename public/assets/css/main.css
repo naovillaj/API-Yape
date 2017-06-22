@@ -71,8 +71,25 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 }
 
 #check{
+
 	background-color: #fbd43b;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 100vh;
+}
+
+#check img{
+	width: 40%;
+	height: 40%;
+}
+
+.feliz{
+	background-color: #451e36;
+	height: 35vh;
+}
+
+.movimientos{
+	background-color: #38052a;
+	height: 65vh;
 }

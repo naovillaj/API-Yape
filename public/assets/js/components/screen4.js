@@ -29,7 +29,7 @@
 		if($('#nombre').val().length >= 2){
 			// alert("hola");
 			if(/^[\w]+@{1}[\w]+\.+[a-z]{2,3}$/.test($('#email').val())){
-				alert("hoa");
+				// alert("hoa");
 				if($('#password').val().length == 6){
 					// alert("la");
 					$('#btn-cuenta').prop('disabled', false);

@@ -31,6 +31,14 @@ const render = (root) =>{
 		wrapper.append(screen6(update));
 	}
 
+	if(state.screen == 'screen7'){
+		wrapper.append(screen7(update));
+	}
+
+	if(state.screen == 'screen8'){
+		wrapper.append(screen8(update));
+	}
+
 		root.append(wrapper);
 }
 

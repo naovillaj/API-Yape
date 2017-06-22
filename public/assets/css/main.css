@@ -21,8 +21,8 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
   font-family: 'Roboto' !important;
 }
 
-#info{
-	margin-top: 20px;
+.marginTop{
+	padding-top: 20px;
 }
 
 .inicio{
@@ -30,8 +30,8 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 }
 
 .inicio img{
-	width: 20%;
-	height: 20%;
+	width: 30%;
+	height: 30%;
 }
 .inicio h2, .inicio h3{
 	font-weight: 800;
@@ -44,7 +44,7 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 	color: white;
 }
 
-.inputCel{
+.inputCel, .inputCod{
 	margin-left: 20px;
 }
 
@@ -52,18 +52,32 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 	padding: 0;
 }
 .inputCel img{
-	width: 70px;
-	height: 20px;
-	/*margin-bottom: 10px;
-	margin-left: 10px;*/
+	width: 60px;
+	height: 35px;
 }
-.inputCel input{
+.inputCel input, .inputCod input{
 	border-top: none;
 	border-left: none;
 	border-right: none;
 	height: 50px;
 	outline: 0;
 	border-color: #212121;
+}
+
+.btn-continuar{
+	margin-top: 70px;
+}
+
+.inputCod, .inputCel{
+	margin-top: 20px;
+}
+.msje{
+	margin-top: 10px;
+}
+
+.inputCod img{
+	width: 30px;
+	height: 20px;
 }
 
 #terminos{
@@ -87,9 +101,37 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 .feliz{
 	background-color: #451e36;
 	height: 35vh;
+	overflow: auto;
+}
+.feliz img{
+	width: 25%;
+	height: 25%;
 }
 
 .movimientos{
 	background-color: #38052a;
 	height: 65vh;
+	overflow: auto;
+}
+.movimientos img{
+	width: 50%;
+	height: 50%;
+}
+
+.question img{
+	width: 20%;
+	height: 20%;
+}
+
+.inputFecha{
+	width: 100%;
+}
+
+.inputFecha input{
+	display: inline-block;
+}
+
+.inputFecha img{
+	width: 20%;
+	height: 20%;
 }

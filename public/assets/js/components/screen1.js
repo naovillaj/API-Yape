@@ -12,7 +12,7 @@ $(document).ready(function(){
 });
 
 const screen1 = (update) =>{
-	const divInfo = $("<div id='info' class='container'></div>");
+	const divInfo = $("<div id='info' class='container marginTop'></div>");
 	const rowImg = $("<div class='row'></div>");
 	const rowBtn = $("<div class='row'></div>");
 	const divImg = $("<div class='text-center owl-carousel owl-theme'></div>");
@@ -29,7 +29,7 @@ const screen1 = (update) =>{
 	divImg.append(img3);
 	rowBtn.append(btn);
 
-	btn.on('click',() => {    
+	btn.on('click',() => {
     state.screen = "screen2";
     console.log(state.screen);
     update();

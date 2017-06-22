@@ -44,10 +44,13 @@ const render = (root) =>{
 
 const state = {
 		screen: null,
-		yapeUser : null
+		yapeCode : null,
+		yapePhone: null,
+		yapeTerms: null,
+		yapeName : null,
+		yapeEmail : null,
+		yapePassword : null
 };
-
-console.log(state.screen);
 
 $(_=>{
 	const root = $("#root");

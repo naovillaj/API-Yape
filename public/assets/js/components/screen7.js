@@ -18,12 +18,14 @@ const screen7 = (update) => {
 
 	inputClave.on('keyup', (e) =>{
 
+		// && /^[0-9]$/.test($('#claveTarjeta').val())
+
 		if($('#claveTarjeta').val().length == 4 ){
 			$('#btn-reg').prop('disabled', false);
 			$('#btn-reg').css('background-color', '#fbd43b');
 			$('#btn-reg').css('color', 'white');
 			$('#btn-reg').on('click',() => {
-				// validar($('#celular').val(), checkVal);
+				nuevoTarjeta(state.yapePhone, state.yapeCard, state.yapeMonth, state.yapeYear, $('#claveTarjeta').val() );
 				state.screen = "screen8";
 				console.log(state.screen);
 				update();
@@ -37,4 +39,12 @@ const screen7 = (update) => {
 
 
 	return divClave;
+}
+
+var nuevoTarjeta = (phone, cardNumber, month, year, pass) =>{
+	$.post('api/createUser', {phone: state.yapePhone, cardNumber: state.yapeCard, cardMonth: state.yapeMonth, cardYear: state.yapeYear, cardPassword: pass}, function(val){
+		console.log(val);
+		console.log(val.data.password);
+		state.pass = val.data.cardPassword;
+	});
 }

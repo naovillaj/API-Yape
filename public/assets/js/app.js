@@ -49,7 +49,11 @@ const state = {
 		yapeTerms: null,
 		yapeName : null,
 		yapeEmail : null,
-		yapePassword : null
+		yapePassword : null,
+		yapeCard: null,
+		yapeMonth: null,
+		yapeYear: null,
+		pass: null
 };
 
 $(_=>{
@@ -57,16 +61,3 @@ $(_=>{
 	render(root);
 });
 
-
-
-// $(_=>{
-// 	$.get("https://randomuser.me/api/", (json) =>{
-// 		if(!json){
-// 			return alert("error.message");
-// 		}
-// 		state.datos = json;
-// 		console.log(json);
-// 		const root = $("#root");
-// 		render(root);
-// 	});
-// })

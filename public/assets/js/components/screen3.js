@@ -12,10 +12,8 @@ const screen3 = (update) => {
 	var interval = setInterval(function() {
 	    counter--;
 	    $('#reintentar').html("Reintentar en <img id='clock' src='assets/img/icons/clock.png'>"+ counter);
-	    // Display 'counter' wherever you want to display it.
-	    if (counter == 0) {
-	        // Display a login box
-	        clearInterval(interval);
+	  	if (counter == 0) {
+	       clearInterval(interval);
 	    }
 	}, 1000);
 
@@ -25,9 +23,6 @@ const screen3 = (update) => {
 	rowCodigo.append(inputCodigo);
 	rowCodigo.append(reintentar);
 
-
-	// if($('#celular').val().length == 9)
-
 	inputCodigo.on('keyup', (e) =>{
 		if($('#codigo').val().length == 6){
 			if($('#codigo').val()==state.yapeCode){
@@ -36,35 +31,27 @@ const screen3 = (update) => {
 				console.log(state.screen);
 				update();
 			}else{
-				alert("hola");
+				alert("Código incorrecto, se te enviará nuevo código");
 				$('#codigo').val("");
 				$.post('api/resendCode',{phone:state.yapePhone} ,(info) =>{
 						console.log(info);
 						console.log(info.data);
 						state.yapeCode = info.data;
 						console.log(state.yapeCode);
-
+						alert(state.yapeCode)
 					})
 
-					var counter = 21;
-					var interval = setInterval(function() {
-							counter--;
-							$('#reintentar').html("Reintentar en <img id='clock' src='assets/img/icons/clock.png'>"+ counter);
-							// Display 'counter' wherever you want to display it.
-							if (counter == 0) {
-									// Display a login box
-									clearInterval(interval);
-							}
-					}, 1000);
+				var counter = 21;
+				var interval = setInterval(function() {
+						counter--;
+						$('#reintentar').html("Reintentar en <img id='clock' src='assets/img/icons/clock.png'>"+ counter);
+						if (counter == 0) {
+							clearInterval(interval);
+						}
+				}, 1000);
 			}
 		}
-
-
-
 	})
-
-
-	// $('#celular').keypress(soloNumeros);
 
 	return divCodigo;
 }

@@ -9,8 +9,7 @@
 	const inputClave = $("<div class='col-xs-10 text-center input-group inputCod'><span class='input-group-addon' id='basic-addon1'><img src='assets/img/icons/lock.png'></span><input id='password' type='password' class='form-control' placeholder='Ingresa Clave de 6 dígitos' maxlength='6' aria-describedby='basic-addon1'></div>");
 	const pAlerta = $("<div class='col-xs-12 text-center msje'><h5>Cuida esta clave como oro, es tu acceso a Yape</h5></div>")
 	const crearCuenta = $("<div class='col-xs-12 text-center btn-continuar'><button id='btn-cuenta' type='button' class='btn btn-lg' disabled='disabled'>CREAR CUENTA</button></div>");
-	// " + state.yapeUser.data.phone + "
-
+	
 	divUsuario.append(rowUsuario);
 	divUsuario.append(rowDatos);
 	divUsuario.append(rowBtn);
@@ -20,23 +19,16 @@
 	rowDatos.append(inputClave);
 	rowDatos.append(pAlerta);
 	rowBtn.append(crearCuenta);
-
-
-	// if($('#celular').val().length == 9)
+	
 
 	inputNombre.on('keyup', (e) =>{
-		// alert("inputNombre");
-		if($('#nombre').val().length >= 2){
-			// alert("hola");
+		if($('#nombre').val().length >= 2 && /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/.test($('#nombre').val())){
 			if(/^[\w]+@{1}[\w]+\.+[a-z]{2,3}$/.test($('#email').val())){
-				// alert("hoa");
 				if($('#password').val().length == 6){
-					// alert("la");
 					$('#btn-cuenta').prop('disabled', false);
 					$('#btn-cuenta').css('background-color', '#fbd43b');
 					$('#btn-cuenta').css('color', 'white');
 					$('#btn-cuenta').on('click',() => {
-						// validar($('#celular').val(), checkVal);
 						state.screen = "screen5";
 						console.log(state.screen);
 						update();
@@ -53,18 +45,13 @@
 	})
 
 	inputCorreo.on('keyup', (e) =>{
-		// alert("inputCorreo");
-		if($('#nombre').val().length >= 2){
-			// alert("hola");
+		if($('#nombre').val().length >= 2 && /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/.test($('#nombre').val())){
 			if(/^[\w]+@{1}[\w]+\.+[a-z]{2,3}$/.test($('#email').val())){
-				alert("hoa");
 				if($('#password').val().length == 6){
-					// alert("la");
 					$('#btn-cuenta').prop('disabled', false);
 					$('#btn-cuenta').css('background-color', '#fbd43b');
 					$('#btn-cuenta').css('color', 'white');
 					$('#btn-cuenta').on('click',() => {
-						// validar($('#celular').val(), checkVal);
 						state.screen = "screen5";
 						console.log(state.screen);
 						update();
@@ -81,18 +68,14 @@
 	})
 
 	inputClave.on('keyup', (e) =>{
-		// alert("inputClave");
-		if($('#nombre').val().length >= 2){
-			// alert("hola");
+		if($('#nombre').val().length >= 2 && /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/.test($('#nombre').val())){
 			if(/^[\w]+@{1}[\w]+\.+[a-z]{2,3}$/.test($('#email').val())){
-				// alert("hoa");
 				if($('#password').val().length == 6){
-					// alert("la");
 					$('#btn-cuenta').prop('disabled', false);
 					$('#btn-cuenta').css('background-color', '#fbd43b');
 					$('#btn-cuenta').css('color', 'white');
 					$('#btn-cuenta').on('click',() => {
-						nuevoUsuario($('#nombre').val(),$('#email').val(), $('#password').val(), update);
+						nuevoUsuario(state.yapePhone, $('#nombre').val(),$('#email').val(), $('#password').val());
 						state.screen = "screen5";
 						console.log(state.screen);
 						update();
@@ -109,14 +92,11 @@
 
 	})
 
-
-	// $('#celular').keypress(soloNumeros);
-
 	return divUsuario;
 }
 
 
-var nuevoUsuario = (name, email, pass, update) =>{
+var nuevoUsuario = (phone, name, email, pass) =>{
 	$.post('api/createUser', {phone: state.yapePhone, name: name, email: email, password: pass}, function(val){
 		console.log(val);
 		console.log(val.data.name);
@@ -126,8 +106,5 @@ var nuevoUsuario = (name, email, pass, update) =>{
 		state.yapeName = val.data.name;
 		state.yapeEmail = val.data.email;
 		state.yapePassword = val.data.password;
-		console.log(state.yapeName);
-		console.log(state.yapeEmail);
-		console.log(state.Password);
 	});
 }

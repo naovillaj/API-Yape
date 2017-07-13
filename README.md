@@ -25,7 +25,7 @@ Se utilizó el siguiente framework: Bootstrap.
 
 ## Lanzamiento 
 
-Esta es la versión final de la página web del <a href="https://shielded-temple-38245.herokuapp.com/">Yape</a>
+Esta es la versión final de la página web del <a href="https://yape-proyecto.herokuapp.com/">Yape</a>
 
 ## Desarrollado con
 

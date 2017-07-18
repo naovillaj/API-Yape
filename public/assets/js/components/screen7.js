@@ -1,5 +1,5 @@
 const screen7 = (update) => {
-	let ultDigitos = state.tarjeta.slice(state.yapeCard.length-5);
+	// let ultDigitos = state.tarjeta.slice(state.yapeCard.length-5);
 	const divClave = $("<div id='divCodigo' class='container marginTop widthcar'></div>");
 	const rowIcons = $("<div class='row'><div class='col-xs-6 pull-left'><span>&#60; Volver</span></div><div class='col-xs-6 pull-right'><img src='assets/img/icons/question.png'></div></div>");
 	const rowIngresa = $("<div class='row'></div>");

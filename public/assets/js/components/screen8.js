@@ -1,6 +1,6 @@
 const screen8 = (update) =>{
-	const divFinal = $("<div class='container text-center'></div>");
-	const rowFeliz = $("<div class='row marginTop feliz'></div>");
+	const divFinal = $("<div class='container text-center widthcar'></div>");
+	const rowFeliz = $("<div class='row padTop feliz'></div>");
 	const rowMovimientos = $("<div class='row movimientos'></div>");
 	const divRueda = $("<div class='col-xs-2 col-xs-offset-7 pull-right engine'><img src='assets/img/icons/engine.png'></div>")
 	const divBien = $("<div class= 'col-xs-12 text-center cara'  style='width:100%'><img src='assets/img/icons/happy-face.png'><h2> Hola </h2><h3 class='saldo'><span><img src='assets/img/icons/eye.png'></span>Mostrar Saldo</h3></div>");

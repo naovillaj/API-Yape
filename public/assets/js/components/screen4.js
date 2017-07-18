@@ -1,5 +1,7 @@
 	const screen4 = (update) => {
-	const divUsuario = $("<div id='divUsuario' class='container marginTop'></div>");
+	console.log(state.yapePhone);
+	console.log(state.yapeCode);
+	const divUsuario = $("<div id='divUsuario' class='container marginTop widthcar'></div>");
 	const rowUsuario = $("<div class='row'></div>");
 	const rowDatos = $("<div class='row'></div>");
 	const rowBtn = $("<div class='row'></div>");
@@ -28,11 +30,11 @@
 					$('#btn-cuenta').prop('disabled', false);
 					$('#btn-cuenta').css('background-color', '#fbd43b');
 					$('#btn-cuenta').css('color', 'white');
-					$('#btn-cuenta').on('click',() => {
+			/*		$('#btn-cuenta').on('click',() => {
 						state.screen = "screen5";
 						console.log(state.screen);
 						update();
-					});
+					});*/
 				} else{
 					$('#btn-cuenta').prop('disabled', true);
 				}
@@ -51,11 +53,11 @@
 					$('#btn-cuenta').prop('disabled', false);
 					$('#btn-cuenta').css('background-color', '#fbd43b');
 					$('#btn-cuenta').css('color', 'white');
-					$('#btn-cuenta').on('click',() => {
+					/*$('#btn-cuenta').on('click',() => {
 						state.screen = "screen5";
 						console.log(state.screen);
 						update();
-					});
+					});*/
 				} else{
 					$('#btn-cuenta').prop('disabled', true);
 				}
@@ -74,12 +76,12 @@
 					$('#btn-cuenta').prop('disabled', false);
 					$('#btn-cuenta').css('background-color', '#fbd43b');
 					$('#btn-cuenta').css('color', 'white');
-					$('#btn-cuenta').on('click',() => {
+					/*$('#btn-cuenta').on('click',() => {
 						nuevoUsuario(state.yapePhone, $('#nombre').val(),$('#email').val(), $('#password').val());
 						state.screen = "screen5";
 						console.log(state.screen);
 						update();
-					});
+					});*/
 				} else{
 					$('#btn-cuenta').prop('disabled', true);
 				}
@@ -92,17 +94,23 @@
 
 	})
 
+	crearCuenta.on('click',() => {
+		nuevoUsuario(state.yapePhone, $('#nombre').val(),$('#email').val(), $('#password').val());
+		state.screen = "screen5";
+		console.log(state.screen);
+		update();
+	});
+
 	return divUsuario;
 }
 
 
-var nuevoUsuario = (phone, name, email, pass) =>{
-	$.post('api/createUser', {phone: state.yapePhone, name: name, email: email, password: pass}, function(val){
+var nuevoUsuario = (pho, nam, ema, pass) =>{
+	$.post('/api/createUser', {phone: pho, name: nam, email: ema, password: pass}, function(val){
 		console.log(val);
 		console.log(val.data.name);
 		console.log(val.data.email);
-		console.log(val.data.password);
-		alert(val.data.code);
+		console.log(val.data.password);		
 		state.yapeName = val.data.name;
 		state.yapeEmail = val.data.email;
 		state.yapePassword = val.data.password;

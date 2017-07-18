@@ -1,5 +1,5 @@
 const screen5 = (update) =>{
-	const divCheck = $("<div id='check' class='container text-center marginTop'></div>");
+	const divCheck = $("<div id='check' class='container text-center marginTop widthcar'></div>");
 	const rowCheck = $("<div class='row'></div>");
 	const divBien = $("<div class= 'col-xs-12 text-center' style='width:100%'><img src='assets/img/icons/check.png'><h2> ¡Bien! </h2><h2>Ahora puedes usar Yape</h2></div>");
 

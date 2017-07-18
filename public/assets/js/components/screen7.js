@@ -1,5 +1,6 @@
 const screen7 = (update) => {
-	const divClave = $("<div id='divCodigo' class='container marginTop'></div>");
+	let ultDigitos = state.tarjeta.slice(state.yapeCard.length-5);
+	const divClave = $("<div id='divCodigo' class='container marginTop widthcar'></div>");
 	const rowIcons = $("<div class='row'><div class='col-xs-6 pull-left'><span>&#60; Volver</span></div><div class='col-xs-6 pull-right'><img src='assets/img/icons/question.png'></div></div>");
 	const rowIngresa = $("<div class='row'></div>");
 	const rowClave = $("<div class='row'></div>");
@@ -23,28 +24,31 @@ const screen7 = (update) => {
 		if($('#claveTarjeta').val().length == 4 ){
 			$('#btn-reg').prop('disabled', false);
 			$('#btn-reg').css('background-color', '#fbd43b');
-			$('#btn-reg').css('color', 'white');
-			$('#btn-reg').on('click',() => {
-				nuevoTarjeta(state.yapePhone, state.yapeCard, state.yapeMonth, state.yapeYear, $('#claveTarjeta').val() );
-				state.screen = "screen8";
-				console.log(state.screen);
-				update();
-			});
+			$('#btn-reg').css('color', 'white');			
 
 		}else{
 			$('#btn-reg').prop('disabled', true);
 			}
 	})
 
+	btnRegistrar.on('click',() => {
+		console.log($('#claveTarjeta').val());
+		nuevoTarjeta(state.yapePhone, state.yapeCard, state.yapeMonth, state.yapeYear, $('#claveTarjeta').val() );
+		console.log(state.yapePhone, state.yapeCard, state.yapeMonth, state.yapeYear, $('#claveTarjeta').val());
+		state.screen = "screen8";
+		console.log(state.screen);
+		update();
+	});
 
 
 	return divClave;
 }
 
-var nuevoTarjeta = (phone, cardNumber, month, year, pass) =>{
-	$.post('api/createUser', {phone: state.yapePhone, cardNumber: state.yapeCard, cardMonth: state.yapeMonth, cardYear: state.yapeYear, cardPassword: pass}, function(val){
+var nuevoTarjeta = (phon, cardNumbe, month, year, pass) =>{
+	console.log(phon, cardNumbe, month, year, pass);
+	$.post('api/registerCard', {phone: phon, cardNumber: cardNumbe, cardMonth: month, cardYear: year, cardPassword: pass}, function(val){
 		console.log(val);
-		console.log(val.data.password);
+		console.log(val.data.cardPassword);
 		state.pass = val.data.cardPassword;
 	});
 }

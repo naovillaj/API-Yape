@@ -1,5 +1,5 @@
 const screen6 = (update) => {
-	const divTarjeta = $("<div id='divCodigo' class='container marginTop'></div>");
+	const divTarjeta = $("<div id='divCodigo' class='container marginTop widthcar'></div>");
 	const rowAsk = $("<div class='row'><div class='col-xs-1 col-xs-offset-9 question'><img src='assets/img/icons/question.png'></div></div>");
 	const rowTarjeta = $("<div class='row'></div>");
 	const rowNumTarjeta = $("<div class='row'></div>");
@@ -41,12 +41,12 @@ const screen6 = (update) => {
 					$('#btn-cont').prop('disabled', false);
 					$('#btn-cont').css('background-color', '#fbd43b');
 					$('#btn-cont').css('color', 'white');
-					$('#btn-cont').on('click',() => {
-						// validar($('#celular').val(), checkVal);
-						state.screen = "screen7";
-						console.log(state.screen);
-						update();
-					});
+					// $('#btn-cont').on('click',() => {
+						
+					// 	state.screen = "screen7";
+					// 	console.log(state.screen);
+					// 	update();
+					// });
 				}else{
 					$('#btn-cont').prop('disabled', true);
 				}
@@ -67,14 +67,7 @@ const screen6 = (update) => {
 					$('#btn-cont').prop('disabled', false);
 					$('#btn-cont').css('background-color', '#fbd43b');
 					$('#btn-cont').css('color', 'white');
-					$('#btn-cont').on('click',() => {
-						state.yapeCard = $('#tarjeta').val();
-						state.yapeMonth = $('#mes').val();
-						state.yapeYear = $('#year').val();					
-						state.screen = "screen7";
-						console.log(state.screen);
-						update();
-					});
+					
 				}else{
 					$('#btn-cont').prop('disabled', true);
 				}
@@ -86,6 +79,15 @@ const screen6 = (update) => {
 			}
 
 	})
+
+	btnContinuar.on('click',() => {
+		state.yapeCard = $('#tarjeta').val();
+		state.yapeMonth = $('#mes').val();
+		state.yapeYear = $('#year').val();					
+		state.screen = "screen7";
+		console.log(state.screen);
+		update();
+	});
 
 	return divTarjeta;
 }

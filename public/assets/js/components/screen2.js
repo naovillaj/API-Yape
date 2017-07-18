@@ -1,5 +1,5 @@
 const screen2 = (update) => {
-	const divInicio = $("<div id='divInicio' class='container marginTop'></div>");
+	const divInicio = $("<div id='divInicio' class='container marginTop widthcar'></div>");
 	const rowCel = $("<div class='row'></div>");
 	const rowInput = $("<div class='row'></div>");
 	const rowContinuar = $("<div class='row'></div>");
@@ -87,17 +87,18 @@ const screen2 = (update) => {
 }
 
 var validar = (cel, check) =>{
+	console.log(cel, check);
 	$.post('api/RegisterNumber', {phone: cel, terms: check}, function(val){
-		console.log(val);
-		console.log(val.data.code);
-		console.log(val.data.phone);
-		console.log(val.data.terms);
-		alert(val.data.code);
+		// console.log(val);
+		// console.log(val.data.code);
+		// console.log(val.data.phone);
+		// console.log(val.data.terms);
+		// alert(val.data.code);
 		state.yapeCode = val.data.code;
 		state.yapePhone = val.data.phone;
 		state.yapeTerms = val.data.terms;
-		console.log(state.yapeCode);
+		// console.log(state.yapeCode);
 		console.log(state.yapePhone);
-		console.log(state.yapeTerms);
+		// console.log(state.yapeTerms);
 	});
 }

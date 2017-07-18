@@ -18,9 +18,9 @@ Morado dark : #38052a*/
 }
 @media (max-width: 1200px){
 	body, #root, .wrapper, #info, .widthcar{
-		margin: auto;
-		width: 320px;
-		height: 90vh;
+		margin: auto !important;
+		width: 320px !important;
+		height: 90vh !important;
 	}
 }	
 

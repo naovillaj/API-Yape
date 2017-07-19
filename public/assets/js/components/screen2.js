@@ -1,5 +1,5 @@
 const screen2 = (update) => {
-	const divInicio = $("<div id='divInicio' class='container marginTop'></div>");
+	const divInicio = $("<div id='divInicio' class='container marginTop widthcar'></div>");
 	const rowCel = $("<div class='row'></div>");
 	const rowInput = $("<div class='row'></div>");
 	const rowContinuar = $("<div class='row'></div>");
@@ -7,7 +7,7 @@ const screen2 = (update) => {
 	const inputCel = $("<div class='col-xs-10 text-center input-group inputCel'><span class='input-group-addon' id='basic-addon1'><img src='assets/img/icons/phoneandnumber.png'></span><input id='celular' type='text' class='form-control' maxlength='9' aria-describedby='basic-addon1'></div>");
 	const terminos = $("<div class='col-xs-10 text-center msje'><input id='checkbox' type='checkbox'>Acepto los <a id='terminos' href='#'>Términos y condiciones</a></div>")
 	const btnContinuar = $("<div class='col-xs-12 text-center btn-continuar'><button id='btn-val' type='button' class='btn btn-lg' disabled='disabled'>CONTINUAR</button></div>")
-	
+
 	divInicio.append(rowCel);
 	divInicio.append(rowInput);
 	divInicio.append(rowContinuar);
@@ -15,7 +15,7 @@ const screen2 = (update) => {
 	rowInput.append(inputCel);
 	rowInput.append(terminos);
 	rowContinuar.append(btnContinuar);
-	
+
 	var soloNumeros = function(e){
 	    var codigoNumero = e.keyCode;
 
@@ -26,7 +26,7 @@ const screen2 = (update) => {
 	    }
   	}
 
-    $('#celular').keypress= soloNumeros;  
+    $('#celular').keypress= soloNumeros;
 
 	inputCel.on('keyup', (e) =>{
 
@@ -40,7 +40,7 @@ const screen2 = (update) => {
 				$('#btn-val').prop('disabled', false);
 				$('#btn-val').css('background-color', '#fbd43b');
 				$('#btn-val').css('color', 'white');
-				
+
 				$('#btn-val').on('click',() => {
 					validar($('#celular').val(), checkVal);
 					state.screen = "screen3";
@@ -87,17 +87,18 @@ const screen2 = (update) => {
 }
 
 var validar = (cel, check) =>{
+	console.log(cel, check);
 	$.post('api/RegisterNumber', {phone: cel, terms: check}, function(val){
-		console.log(val);
-		console.log(val.data.code);
-		console.log(val.data.phone);
-		console.log(val.data.terms);
-		alert(val.data.code);
+		// console.log(val);
+		// console.log(val.data.code);
+		// console.log(val.data.phone);
+		// console.log(val.data.terms);
+		// alert(val.data.code);
 		state.yapeCode = val.data.code;
 		state.yapePhone = val.data.phone;
 		state.yapeTerms = val.data.terms;
-		console.log(state.yapeCode);
+		// console.log(state.yapeCode);
 		console.log(state.yapePhone);
-		console.log(state.yapeTerms);
+		// console.log(state.yapeTerms);
 	});
 }

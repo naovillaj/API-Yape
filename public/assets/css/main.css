@@ -16,11 +16,15 @@ Morado dark : #38052a*/
 	box-sizing: border-box;
 
 }
-@media (max-width: 1200px){
+@media (min-width: 998px){
 	body, #root, .wrapper, #info, .widthcar{
 		margin: auto !important;
 		width: 320px !important;
 		height: 90vh !important;
+		/*border: 2px solid black;*/
+	}
+	html{
+		background: whitesmoke;
 	}
 }
 

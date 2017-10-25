@@ -4,7 +4,7 @@ const render = (root) =>{
 	root.empty();
 	const wrapper = $('<div class="wrapper"></div>');
   const update = function() {
-    render(root);
+	render(root);
   }
 
 	if(state.screen == null){
@@ -13,6 +13,7 @@ const render = (root) =>{
 
 	if(state.screen == 'screen2'){
 		wrapper.append(screen2(update));
+
 	}
 
 	if(state.screen == 'screen3'){

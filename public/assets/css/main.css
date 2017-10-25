@@ -89,10 +89,10 @@ span, input:hover, input:focus, button:focus, button:hover, button, input{
 	background-color: #F6C667;
 }
 
-.inputCel, .inputCod{
-	margin-left: 20px;
+#container-code{
+	margin: 0 auto;
+	border-bottom: 1.5px solid gray;
 }
-
 .inputCel span{
 	border: 0;
 	padding: 0;
@@ -114,6 +114,7 @@ span, input:hover, input:focus, button:focus, button:hover, button, input{
 	border-bottom-color: red !important;
 }
 #container-cel{
+	margin: 0 auto;
 	border-bottom: 1.5px solid gray;
 }
 .btn-continuar{
@@ -124,16 +125,17 @@ span, input:hover, input:focus, button:focus, button:hover, button, input{
 	margin-top: 20px;
 }
 .msje{
+	width: 100%;
 	margin-top: 10px;
 }
 
 .inputCod img{
-	width: 30px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
 }
 
 .inputCod span, .padd{
-	padding: 0;
+	padding: 10px;
 }
 
 #terminos{

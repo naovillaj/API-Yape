@@ -65,7 +65,7 @@ const screen2 = (update) => {
 		if(checkVal==true){
 			if($('#celular').val().length == 9 && /^([9]\d{8})+$/.test($('#celular').val())){
 				$('#btn-val').prop('disabled', false);
-				$('#btn-val').css('background-color', '#fbd43b');
+				$('#btn-val').css('background-color', '#1FAD9F');
 				$('#btn-val').css('color', 'white');
 
 				$('#btn-val').on('click',() => {

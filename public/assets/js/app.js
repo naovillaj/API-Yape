@@ -6,7 +6,6 @@ const render = (root) =>{
   const update = function() {
     render(root);
   }
-  state.screen = 'screen8';
   if(state.screen == null){
     wrapper.append(screen1(update));
   }

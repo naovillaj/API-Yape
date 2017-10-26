@@ -11,21 +11,21 @@ Morado dark : #38052a*/
 
 
 *{
-	margin: 0;
-	padding:0;
-	box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
 
 }
 @media (min-width: 998px){
-	body, #root, .wrapper, #info, .widthcar{
-		margin: auto !important;
-		width: 320px !important;
-		height: 90vh !important;
-		/*border: 2px solid black;*/
-	}
-	html{
-		background: whitesmoke;
-	}
+  body, #root, .wrapper, #info, .widthcar{
+    margin: auto !important;
+    width: 320px !important;
+    height: 90vh !important;
+    /*border: 2px solid black;*/
+  }
+  html{
+    background: whitesmoke;
+  }
 }
 
 /*@media (min-width: 992px){*/
@@ -33,222 +33,243 @@ Morado dark : #38052a*/
 /*@media only screen and (max-device-width: 768px){
 */
 body,h1,h2,h3,h4,h5,h6,span,input,label,small{
-	font-family: 'Roboto' !important;
+  font-family: 'Roboto' !important;
 }
 
 hr{
-	width: 100%;
-	border-top: 1px solid #49233b;
-	margin-top: 10px;
-	margin-bottom: 20px;
+  width: 100%;
+  border-top: 1px solid #49233b;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .margleft{
-	margin-left:20px;
-	padding-top: 10px;
+  margin-left:20px;
+  padding-top: 10px;
 }
 
 [type="checkbox"], #checkbox{
-	height: 20px;
-	width: 20px;
-	background-color: #00c3a3;
-	border-radius: 4px;
-	margin-right: 10px;
-	color: #00c3a3;
+  height: 20px;
+  width: 20px;
+  background-color: #00c3a3;
+  border-radius: 4px;
+  margin-right: 10px;
+  color: #00c3a3;
 }
 
 .marginTop{
-	padding-top: 20px;
+  padding-top: 20px;
 }
 
 .inicio{
-	margin: 30px 0;
+  margin: 30px 0;
 }
 
 .inicio img{
-	width: 30%;
-	height: 30%;
+  width: 30%;
+  height: 30%;
 }
 .inicio h2, .inicio h3{
-	font-weight: 800;
-	color: black;
+  font-weight: 800;
+  color: black;
 }
 
 span, input:hover, input:focus, button:focus, button:hover, button, input{
-	border: 0 !important;
-	-webkit-box-shadow: none !important;
-	box-shadow: none !important;
-	outline: 0 !important;
-	box-shadow: 0 !important;
+  border: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  box-shadow: 0 !important;
 }
 .btn-inicio button{
-	width: 90%;
-	background-color: #1FAD9F;
-	color: white;
+  width: 90%;
+  background-color: #1FAD9F;
+  color: white;
 }
 .btn-inicio button:hover, .btn-inicio button:focus{
-	background-color: #F6C667;
+  background-color: #F6C667;
 }
 
 #container-code{
-	margin: 0 auto;
-	border-bottom: 1.5px solid gray;
+  margin: 0 auto;
+  border-bottom: 1.5px solid gray;
 }
 .inputCel span{
-	border: 0;
-	padding: 0;
-	border-radius: 0;
-	border-radius: 0;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  border-radius: 0;
 }
 .inputCel img{
-	height: 30px;
+  height: 30px;
 }
 .inputCel input, .inputCod input{
-	font-size: 18px;
-	height: 50px;
-	outline: 0;
-	border-color: #212121;
-	border-radius: 0;
+  font-size: 18px;
+  height: 50px;
+  outline: 0;
+  border-color: #212121;
+  border-radius: 0;
 }
 
 .red-bottom {
-	border-bottom-color: red !important;
+  border-bottom-color: red !important;
 }
-#container-cel{
-	margin: 0 auto;
-	border-bottom: 1.5px solid gray;
+#container-cel, #container-card, #container-password-card{
+  margin: 0 auto;
+  border-bottom: 1.5px solid gray;
 }
 .btn-continuar{
-	margin-top: 70px;
+  margin-top: 70px;
 }
 
 .inputCod, .inputCel{
-	margin-top: 20px;
+  margin-top: 20px;
 }
 .msje{
-	width: 100%;
-	margin-top: 10px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .inputCod img{
-	width: 25px;
-	height: 25px;
+  width: 20px;
+  height: 25px;
+}
+
+.input-data{
+  border-bottom: 1px solid gray;
+  margin: 0 auto;
+}
+img[src='assets/img/icons/user.png'] {
+  width: 27px;
+}
+img[src='assets/img/icons/message-gray.png']{
+  width: 25px;
+  height: 20px;
 }
 
 .inputCod span, .padd{
-	padding: 10px;
+  padding: 10px;
 }
 
 #terminos{
-	color: #00c3a3;
+  color: #00c3a3;
 }
 
 #check{
-	background-color: #fbd43b;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+  background-color: #fbd43b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 #check img{
-	width: 40%;
-	height: 40%;
+  width: 40%;
+  height: 40%;
 }
 
 .feliz{
-	background-color: #451e36;
-	height: 35vh;
-	overflow: auto;
+  background-color: #451e36;
+  height: 35vh;
+  overflow: auto;
 }
 .cara img{
-	width: 30%;
-	height: 30%;
+  width: 30%;
+  height: 30%;
 }
 .cara h2{
-	color: white;
+  color: white;
+}
+.engine{
+  margin-top: 10px;
 }
 .engine img{
-	width: 50%;
-	height: 50%;
+  width: 50%;
+  height: 50%;
 }
 .saldo{
-	color: #00c3a3;
-	margin-top: 0;
+  color: #00c3a3;
+  margin-top: 0;
 }
 .saldo img{
-	width: 5%;
-	height: 5%;
+  margin-right: 10px;
+  width: 5%;
+  height: 5%;
 }
 .ultMov{
-	color: white;
-	padding: 15px 0;
-	font-size: 18px;
+  color: white;
+  padding: 15px 0;
+  font-size: 18px;
 }
 
 .movimientos{
-	background-color: #38052a;
-	height: 65vh;
-	overflow: auto;
+  background-color: #38052a;
+  height: 65vh;
 }
 .movimientos img{
-	width: 40%;
-	height: 40%;
+  width: 40%;
+  height: 40%;
 }
 
 .question img{
-	width: 20%;
-	height: 20%;
+  width: 20%;
+  height: 20%;
 }
 
 .inputFecha{
-	width: 100%;
-	margin-top: 40px;
+  width: 100%;
+  margin-top: 40px;
 }
 
 .inputFecha input{
-	display: inline-block;
-	width: 50px;
+  display: inline-block;
+  width: 50px;
 }
 .inputFecha span{
-	margin-right: 30px;
+  margin-right: 30px;
 }
 
 .inputFecha img{
-	width: 20%;
-	height: 20%;
+  width: 20%;
+  height: 20%;
 }
 .escanear{
-	margin-top: 70px;
+  margin-top: 30px;
+  text-align: center;
 }
 .escanear img{
-	margin-right: 20px;
+  width: 35px;
+  margin-right: 12px;
 }
 .icon img{
-	width: 90%;
-	height: 90%;
+  width: 90%;
+  height: 90%;
 }
 .padTop{
-	padding-top: 15px;
+  padding-top: 15px;
 }
 .pagoh5{
-	padding-left: 0;
-	margin-top: 35px;
+  padding-left: 0;
+  margin-top: 35px;
 }
 .pagoh5 h5{
-	color: #8f8f8f;
+  color: #8f8f8f;
 }
 .enviarh4 h4{
-	color: white;
+  color: white;
 }
 .fiu{
-	margin-left: 10px;
+  margin-left: 10px;
 }
 .pagos{
-	margin-top: 40px;
+  margin-top: 40px;
 }
-
+.question{
+  float: right;
+  margin-right: 10px;
+  width: 41px;
+}
 .widthcar{
-	width: 100%;
+  width: 100%;
 }
 
 /*}*/
